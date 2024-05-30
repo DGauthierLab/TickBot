@@ -30,3 +30,10 @@ library(scales)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r data import}
+#import tickbot data from Google
+
+data_tb <- read_sheet("https://docs.google.com/spreadsheets/d/1DC0JCGUZPPxh2Eqrvm6OvN99y90eVjn5YXXOFl1Cl4w/edit?usp=sharing", col_types = "Dtcccccnc")
+data_tb <- as_tibble(data_tb)
+
+```
