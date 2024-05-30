@@ -1,4 +1,4 @@
-# 2024_LastName_ProjName
+# TickBOT
 
 ---
 
