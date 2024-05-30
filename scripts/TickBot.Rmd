@@ -48,7 +48,8 @@ data_tb_tidy <- within(data_tb_tidy,{
   time <- format(time_tb, "%H:%M")
 })
 
-
+data_tb_tidy <- data_tb_tidy %>%
+  dplyr::select(!time_tb)
 
 
 ```
