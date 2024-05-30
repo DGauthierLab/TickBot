@@ -1,4 +1,32 @@
-```{r}
+```{r setup}
 
+#install packages
+if (!require("tidyverse")) install.packages("tidyverse")
+if (!require("googlesheets4")) install.packages("googlesheets4")
+if (!require("janitor")) install.packages("janitor")
+if (!require("lubridate")) install.packages("lubridate")
+if (!require("readxl")) install.packages("readxl")
+if (!require("MuMIn")) install.packages("MuMIn")
+if (!require("MASS")) install.packages("MASS")
+if (!require("pscl")) install.packages("pscl")
+if (!require("ggokabeito")) install.packages("ggokabeito")
+if (!require("remotes")) install.packages("remotes")
+#remotes::install_github("trobinj/trtools")
+
+#set working directory to present directory
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
+#load libraries
+library(tidyverse)
+library(googlesheets4)
+library(janitor)
+library(lubridate)
+library(readxl)
+library(MuMIn)
+library(MASS)
+library(pscl)
+library(ggokabeito)
+library(scales)
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
