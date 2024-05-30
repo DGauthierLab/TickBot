@@ -37,3 +37,11 @@ data_tb <- read_sheet("https://docs.google.com/spreadsheets/d/1DC0JCGUZPPxh2Eqrv
 data_tb <- as_tibble(data_tb)
 
 ```
+
+```{r data wrangling}
+data_tb_tidy <- data_tb %>% 
+  clean_names() %>%
+  fill(c(date:transect), .direction = "down")
+
+
+```
