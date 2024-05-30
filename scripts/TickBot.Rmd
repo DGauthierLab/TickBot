@@ -43,5 +43,12 @@ data_tb_tidy <- data_tb %>%
   clean_names() %>%
   fill(c(date:transect), .direction = "down")
 
+data_tb_tidy <- within(data_tb_tidy,{
+  time_tb <- as.POSIXlt(time,format="%Y/%m/%d %H:%M")
+  time <- format(time_tb, "%H:%M")
+})
+
+
+
 
 ```
